@@ -210,6 +210,54 @@ footer>p{
 #essentials>div>img{
     width: 30%;
 }
+#content{
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: auto;
+}
+#content>p{
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 55px;
+}
+#content>#cards{
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    justify-content: space-between;
+}
+#content>#cards>div{
+    /* border: 1px solid black; */
+    width: 32.5%;
+}
+#content>#cards>div:hover{
+    cursor: pointer;
+}
+#content>#cards>div>h2{
+    font-size: 35px;
+    color: white;
+    letter-spacing: 1px;
+}
+#content>#cards>div:nth-child(1)>h2{
+    position: absolute;
+    top: 52%;
+    left: 15%;
+}
+#content>#cards>div:nth-child(2)>h2{
+    position: absolute;
+    top: 52%;
+    left: 44%;
+}
+#content>#cards>div:nth-child(3)>h2{
+    position: absolute;
+    top: 52%;
+    left: 72%;
+}
+#content>#cards>div>img{
+    width: 100%;
+}
 @media all and (min-width: 650px) and (max-width:1080px){
     #offerstab>div{
         width: 90%;

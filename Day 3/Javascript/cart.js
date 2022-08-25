@@ -14,29 +14,29 @@ men.addEventListener("click", menFun);
 women.addEventListener("click", womenFun);
 kids.addEventListener("click", kidsFun);
 
+
 function homeFun(){
-    window.location.href = "/Day 2/Html/index.html";
+    window.location.href = "/Day 3/Html/index.html";
 }
 
 function likeFun(){
-    window.location.href = "/Day 2/Html/like.html";
+    window.location.href = "/Day 3/Html/like.html";
 }
 
 function cartFun(){
-    window.location.href = "/Day 2/Html/cart.html";
+    window.location.href = "/Day 3/Html/cart.html";
 }
 function accountFun(){
-    window.location.href = "/Day 2/Html/account.html";
+    window.location.href = "/Day 3/Html/account.html";
 }
 function womenFun(){
-    window.location.href = "/Day 2/Html/women.html";
+    window.location.href = "/Day 3/Html/women.html";
 
 }
 function menFun(){
-    window.location.href = "/Day 2/Html/men.html";
+    window.location.href = "/Day 3/Html/men.html";
 
 }
 function kidsFun(){
-    window.location.href = "/Day 2/Html/kids.html";
-
+    window.location.href = "/Day 3/Html/kids.html";
 }
