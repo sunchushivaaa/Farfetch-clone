@@ -220,6 +220,9 @@ footer>p{
     color: white;
     font-weight: bold;
 }
+#essentials>div>button:hover{
+    cursor: pointer;
+}
 #essentials>div>img{
     width: 30%;
 }
