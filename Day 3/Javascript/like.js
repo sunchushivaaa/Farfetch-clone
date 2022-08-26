@@ -17,6 +17,8 @@ kids.addEventListener("click", kidsFun);
 
 let likedArr = JSON.parse(localStorage.getItem("liked-prods")) || [];
 
+let cartArr = JSON.parse(localStorage.getItem("cart-prods")) || [];
+
 function homeFun(){
     window.location.href = "/Day 3/Html/index.html";
 }
@@ -46,7 +48,7 @@ function kidsFun(){
 function displayTable(read){
     likewall.innerHTML = "";
 
-    read.forEach(function(elem){
+    read.forEach(function(elem,i){
 
         let block = document.createElement("div");
 
@@ -64,12 +66,29 @@ function displayTable(read){
 
         let p4 = document.createElement("p");
         p4.innerText = `$${elem.price}`;
+        p4.style.cursor = "pointer";
+        p4.addEventListener("click", function(){
+          let rupees = Number(elem.price)*80;
+          p4.innerText = "₹" + rupees;
+        });
 
         let btnRemove = document.createElement("button");
         btnRemove.innerText = "Remove";
+        btnRemove.addEventListener("click", function(){
+            event.target.parentNode.remove();
+            likedArr.splice(i,1);
+            localStorage.setItem("liked-prods" , JSON.stringify(likedArr));
+        })
 
         let btnCart = document.createElement("button");
         btnCart.innerText = "Add to cart";
+        btnCart.addEventListener("click", function(){
+            btnCart.innerText = "Added";
+            btnCart.style.color = "green";
+            btnCart.style.fontWeight = "bold";
+            cartArr.push(elem);
+            localStorage.setItem("cart-prods", JSON.stringify(cartArr));
+          });
 
         block.append(image, p1, p2, p3, p4, btnRemove, btnCart);
         likewall.append(block);

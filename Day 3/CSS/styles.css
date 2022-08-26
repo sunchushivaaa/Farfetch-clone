@@ -56,7 +56,7 @@ body{
 }
 #navbar>div>#pages>div:hover{
     color: grey;
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(245, 245, 245);
     cursor: pointer;
 }
 h1{
@@ -314,6 +314,28 @@ footer>p{
         grid-template-rows: repeat(3,1fr);
         gap: 30px;
     }
+    #content>#cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        gap: 15px;
+    }
+    #content>#cards>div{
+        width: 100%;
+    }
+    #content>#cards>div:nth-child(1)>h2{
+        top: 440px;
+        left: 260px;
+    }
+    #content>#cards>div:nth-child(2)>h2{
+        top: 790px;
+        left: 270px;
+    }
+    #content>#cards>div:nth-child(3)>h2{
+        top: 1150px;
+        left: 268px;
+    }
+    
 }
 @media all and (min-width: 350px) and (max-width:649px){
     #offerstab>div{
@@ -380,5 +402,26 @@ footer>p{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3,1fr);
         gap: 30px;
+    }
+    #content>#cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        gap: 15px;
+    }
+    #content>#cards>div{
+        width: 100%;
+    }
+    #content>#cards>div:nth-child(1)>h2{
+        top: 400px;
+        left: 120px;
+    }
+    #content>#cards>div:nth-child(2)>h2{
+        top: 645px;
+        left: 135px;
+    }
+    #content>#cards>div:nth-child(3)>h2{
+        top: 880px;
+        left: 165px;
     }
 }

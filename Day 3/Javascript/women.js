@@ -57,7 +57,7 @@ var newinWomenData = [
       season: "New Season",
       brand: "Amina Muaddi",
       desc: "Lupita 110mm mules",
-      price: "1,234",
+      price: "1234",
     },
     {
       image_url:
@@ -65,7 +65,7 @@ var newinWomenData = [
       season: "New Season",
       brand: "Tallwe Marmo",
       desc: "Mambo cold-shoulder halterneck kaftan dress",
-      price: "1,566",
+      price: "1566",
     },
     {
       image_url:
@@ -73,7 +73,7 @@ var newinWomenData = [
       season: "New Season",
       brand: "Alexandre Vauthier",
       desc: "houndstooth-pattern double-breasted blazer",
-      price: "3,734",
+      price: "3734",
     },
     {
       image_url:
@@ -81,7 +81,7 @@ var newinWomenData = [
       season: "New Season",
       brand: "Balenciaga",
       desc: "Neo Cagole XS metallic tote bag",
-      price: "2,500",
+      price: "2500",
     },
   ];
   
@@ -92,7 +92,7 @@ var trendingnowWomenData = [
       season: "New Season",
       brand: "Dolce & Gabbana",
       desc: "graffiti-print hooded jacket",
-      price: "1,275",
+      price: "1275",
     },
     {
       image_url:
@@ -100,7 +100,7 @@ var trendingnowWomenData = [
       season: "New Season",
       brand: "Balenciaga",
       desc: "mini Neo Classic City tote",
-      price: "1,730",
+      price: "1730",
     },
     {
       image_url:
@@ -108,7 +108,7 @@ var trendingnowWomenData = [
       season: "New Season",
       brand: "Coperni",
       desc: "hybrid flared trousers",
-      price: "1,338",
+      price: "1338",
     },
     {
       image_url:
@@ -116,7 +116,7 @@ var trendingnowWomenData = [
       season: "New Season",
       brand: "The Attico",
       desc: "Devon glittered sandals",
-      price: "2,001",
+      price: "2001",
     },
   ];
 
@@ -143,11 +143,18 @@ function displayTable(read){
 
         let p4 = document.createElement("p");
         p4.innerText = `$${elem.price}`;
+        p4.style.cursor = "pointer";
+        p4.addEventListener("click", function(){
+          let rupees = Number(elem.price)*80;
+          p4.innerText = "₹" + rupees;
+        });
 
         let btn = document.createElement("button");
         btn.innerHTML = "❤️";
         btn.addEventListener("click", function(){
-            btn.innerHTML = `Liked ❤️`
+            btn.innerHTML = `Liked`;
+            btn.style.color = "red";
+            btn.style.fontWeight = "bold";
             likedArr.push(elem);
             localStorage.setItem("liked-prods", JSON.stringify(likedArr));
         });
@@ -180,11 +187,18 @@ function displayTable2(read){
 
         let p4 = document.createElement("p");
         p4.innerText = `$${elem.price}`;
+        p4.style.cursor = "pointer";
+        p4.addEventListener("click", function(){
+          let rupees = Number(elem.price)*80;
+          p4.innerText = "₹" + rupees;
+        });
 
         let btn = document.createElement("button");
         btn.innerHTML = "❤️";
         btn.addEventListener("click", function(){
-            btn.innerHTML = `Liked ❤️`
+            btn.innerHTML = `Liked`;
+            btn.style.color = "red";
+            btn.style.fontWeight = "bold";
             likedArr.push(elem);
             localStorage.setItem("liked-prods", JSON.stringify(likedArr));
         });

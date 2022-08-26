@@ -56,7 +56,7 @@ body{
 }
 #navbar>div>#pages>div:hover{
     color: grey;
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(245, 245, 245);
     cursor: pointer;
 }
 h1{
@@ -209,6 +209,57 @@ footer>p{
 #essentials>div>img{
     width: 30%;
 }
+#thewall{
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px 0px;
+}
+#thewall>div{
+    border: 0.5px solid rgb(234, 234, 234);
+    width: 85%;
+    padding: 15px;
+}
+#thewall>div>img{
+    width: 100%;
+}
+#thewall>div>p:nth-child(2){
+    margin-top: 20px;
+    color: rgb(172, 172, 172);
+}
+#thewall>div>p:nth-child(3){
+    font-weight:bold;
+    letter-spacing: 1px;
+    margin-top: -10px;
+}
+#thewall>div>p:nth-child(4){
+    color: rgb(117, 117, 117);
+    margin-top: -10px;
+}
+#thewall>div>button{
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-right: 8px;
+}
+#thewall>div>button:hover{
+    cursor: pointer;
+    color: grey;
+}
+#sort{
+    padding: 10px;
+    font-size: medium;
+    border: 0.5px solid rgb(206, 206, 206);
+    border-radius: 5px;
+    margin-left: 10%;
+    margin-bottom: -8%;
+}
 @media all and (min-width: 650px) and (max-width:1080px){
     #offerstab>div{
         width: 90%;
@@ -263,6 +314,10 @@ footer>p{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3,1fr);
         gap: 30px;
+    }
+    #thewall{
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px 10px;
     }
 }
 @media all and (min-width: 350px) and (max-width:649px){
@@ -329,5 +384,9 @@ footer>p{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3,1fr);
         gap: 30px;
+    }
+    #thewall{
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px 10px;
     }
 }

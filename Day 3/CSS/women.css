@@ -59,7 +59,7 @@ body{
 }
 #navbar>div>#pages>div:hover{
     color: grey;
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(245, 245, 245);
     cursor: pointer;
 }
 h1{
@@ -245,6 +245,9 @@ footer>p{
     width: 100%;
     height: 100%;
 }
+#content1>div:nth-child(1){
+    cursor: pointer;
+}
 #content1>div:nth-child(2){
     padding: 0px 25px;
     padding-top: 10%;
@@ -309,6 +312,9 @@ footer>p{
     cursor: pointer;
     color: rgb(151, 151, 151);
 }
+#content2>div:nth-child(2){
+    cursor: pointer;
+}
 #content3{
     /* border: 1px solid black; */
     width: 80%;
@@ -324,6 +330,9 @@ footer>p{
 #content3>div>img{
     width: 100%;
     height: 100%;
+}
+#content3>div:nth-child(1){
+    cursor: pointer;
 }
 #content3>div:nth-child(2){
     padding: 0px 25px;
@@ -600,6 +609,130 @@ footer>p{
         grid-template-rows: repeat(3,1fr);
         gap: 30px;
     }
+    #content1{
+        border: 1px solid black;
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        gap: 5px;
+        /* margin-bottom: -10%; */
+    }
+    #content1>div{
+        width: 100%;
+    }
+    #content1>div:nth-child(2){
+        border: 1px solid black;
+        width: 91%;
+        margin: auto;
+        margin-top: 10%;
+        margin-bottom: 0%;
+    }
+    #content2{
+        border: 1px solid black;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        margin-top: -5%;
+        margin-bottom: 15%;
+    }
+    #content2>div{
+        width: 100%;
+    }
+    #content2>div:nth-child(1){
+        padding-top: 10%;
+        width: 88%;
+    }
+    #content2>div:nth-child(1)>button{
+        margin-left: 41%;
+    }
+    #content2>div:nth-child(2){
+        margin-top: -32%;
+    }
+    #content3{
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        gap: 5px;
+        margin-bottom: -45%;
+    }
+    #content3>div{
+        width: 100%;
+    }
+    #content3>div:nth-child(2){
+        width: 91%;
+        margin-top: -20%;
+    }
+    #highlight{
+        width: 90%;
+        margin-bottom: 20%;
+        margin-top: 25%;
+    }
+    #highlight>#cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px 25px;
+    }
+    #highlight>#cards>div{
+        width: 100%;
+        cursor: pointer;
+    }
+    #discover{
+        width: 90%;
+    }
+    #discover>div:nth-child(2){
+        width: 100%;
+        margin: auto;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px 0px;
+    }
+    #discover>div:nth-child(2)>div{
+        width: 90%;
+        margin: auto;
+    }
+    #explore{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #explore>div{
+        width: 100%;
+    }
+    #explore>div:nth-child(1){
+        width: 99.5%;
+        padding: 12% 0;
+    }
+    #newin{
+        width: 90%;
+        margin:auto;
+        margin-bottom: 80px;
+        margin-top: -50%;
+    }
+    #newin>div:nth-child(2){
+        width: 100%;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    #newin>div:nth-child(2)>div{
+        width: 90%;
+        margin: auto;
+    }
+    #explore{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #explore>div{
+        width: 100%;
+    }
+    #explore>div:nth-child(1){
+        width: 99.5%;
+        padding: 12% 0;
+    }
 }
 @media all and (min-width: 350px) and (max-width:649px){
     #offerstab>div{
@@ -666,4 +799,110 @@ footer>p{
         grid-template-rows: repeat(3,1fr);
         gap: 30px;
     }
+    #content1{
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        gap: 5px;
+        margin-bottom: -5%;
+    }
+    #content1>div{
+        width: 100%;
+    }
+    #content1>div:nth-child(2){
+        width: 91%;
+    }
+    #content2{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        margin-bottom: 20%;
+    }
+    #content2>div{
+        width: 100%;
+    }
+    #content2>div:nth-child(1){
+        padding-top: 10%;
+        width: 88%;
+    }
+    #content2>div:nth-child(1)>button{
+        margin-left: 41%;
+    }
+    #content2>div:nth-child(2){
+        margin-top: -20%;
+    }
+    #content3{
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        gap: 5px;
+        margin-bottom: -5%;
+    }
+    #content3>div{
+        width: 100%;
+    }
+    #content3>div:nth-child(2){
+        width: 91%;
+        margin-top: -10%;
+    }
+    #highlight{
+        width: 90%;
+        margin-bottom: 20%;
+    }
+    #highlight>#cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        gap: 40px;
+    }
+    #highlight>#cards>div{
+        width: 100%;
+        cursor: pointer;
+    }
+    #discover{
+        width: 90%;
+    }
+    #discover>div:nth-child(2){
+        width: 100%;
+        margin: auto;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px 0px;
+    }
+    #discover>div:nth-child(2)>div{
+        width: 90%;
+        margin: auto;
+    }
+    #explore{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #explore>div{
+        width: 100%;
+    }
+    #explore>div:nth-child(1){
+        width: 99.5%;
+        padding: 12% 0;
+    }
+    #newin{
+        width: 90%;
+        margin:auto;
+        margin-bottom: 80px;
+        margin-top: -30%;
+    }
+    #newin>div:nth-child(2){
+        width: 100%;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    #newin>div:nth-child(2)>div{
+        width: 90%;
+        margin: auto;
+    }
+
 }
