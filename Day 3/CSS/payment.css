@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+#gateway{
+    width: 35%;
+    margin: auto;
+    margin-top: 2%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#gateway>h1{
+    text-align: center;
+    padding: 8% 0 1% 0;
+}
+#gateway>#form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding-bottom: 10%;
+}
+#gateway>#form>input{
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    font-size: medium;
+}
+#gateway>#form>input:nth-child(8){
+    cursor: pointer;
+}
+button{
+    position: relative;
+    top: 70px;
+    left: 50px;
+    padding: 10px 20px;
+    font-size: medium;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+button:hover{
+    color: red;
+    background-color: white;
+}
+@media all and (min-width: 363px) and (max-width: 580px){
+    #gateway{
+        width: 85%;
+    }
+    button{
+        top: 45px;
+        left: 36px;
+    }
+}
+@media all and (min-width: 581px) and (max-width: 1080px){
+    #gateway{
+        width: 55%;
+    }
+    button{
+        top: 60px;
+    }
+}

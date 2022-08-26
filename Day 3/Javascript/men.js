@@ -56,7 +56,7 @@ var newinMenData = [
       season: "New Season",
       brand: "Off-White",
       desc: "graphic-print Arrows T-shirt>",
-      price: 507,
+      price: "507",
     },
     {
       image_url:
@@ -64,7 +64,7 @@ var newinMenData = [
       season: "New Season",
       brand: "AMBUSH",
       desc: "x Nike Air Adjust Force sneakers",
-      price: 461,
+      price: "461",
     },
     {
       image_url:
@@ -72,7 +72,7 @@ var newinMenData = [
       season: "New Season",
       brand: "AMIRI",
       desc: "distressed patchwork skinny jeans",
-      price: "2,945",
+      price: "2945",
     },
     {
       image_url:
@@ -80,7 +80,7 @@ var newinMenData = [
       season: "New Season",
       brand: "Acne Studios",
       desc: "mini Face crossbody bag",
-      price: 339,
+      price: "339",
     },
   ];
 
@@ -91,7 +91,7 @@ var trendingnowmenData = [
       season: "New Season",
       brand: "Versace",
       desc: "contrast-sleeve leather",
-      price: "4,749",
+      price: "4749",
     },
     {
       image_url:
@@ -99,7 +99,7 @@ var trendingnowmenData = [
       season: "New Season",
       brand: "Balenciaga",
       desc: "Car East-West medium tote",
-      price: "1,730",
+      price: "1730",
     },
     {
       image_url:
@@ -107,7 +107,7 @@ var trendingnowmenData = [
       season: "New Season",
       brand: "Marni",
       desc: "logo-print T-shirt",
-      price: 475,
+      price: "475",
     },
     {
       image_url:
@@ -115,7 +115,7 @@ var trendingnowmenData = [
       season: "New Season",
       brand: "Off-White",
       desc: "Zip-Tie lace-up sneakers",
-      price: "1,248",
+      price: "1248",
     },
   ];
 
@@ -143,11 +143,19 @@ function displayTable(read){
 
         let p4 = document.createElement("p");
         p4.innerText = `$${elem.price}`;
+        p4.style.cursor = "pointer";
+        p4.addEventListener("click", function(){
+          let rupees = Number(elem.price)*80;
+          p4.innerText = "₹" + rupees;
+        });
+
 
         let btn = document.createElement("button");
         btn.innerHTML = "❤️";
         btn.addEventListener("click", function(){
-            btn.innerHTML = `Liked ❤️`
+            btn.innerHTML = `Liked`;
+            btn.style.color = "red";
+            btn.style.fontWeight = "bold";
             likedArr.push(elem);
             localStorage.setItem("liked-prods", JSON.stringify(likedArr));
         });
@@ -180,11 +188,18 @@ function displayTable2(read){
 
         let p4 = document.createElement("p");
         p4.innerText = `$${elem.price}`;
+        p4.style.cursor = "pointer";
+        p4.addEventListener("click", function(){
+          let rupees = Number(elem.price)*80;
+          p4.innerText = "₹" + rupees;
+        });
 
         let btn = document.createElement("button");
         btn.innerHTML = "❤️";
         btn.addEventListener("click", function(){
-            btn.innerHTML = `Liked ❤️`
+            btn.innerHTML = `Liked`;
+            btn.style.color = "red";
+            btn.style.fontWeight = "bold";
             likedArr.push(elem);
             localStorage.setItem("liked-prods", JSON.stringify(likedArr));
         });

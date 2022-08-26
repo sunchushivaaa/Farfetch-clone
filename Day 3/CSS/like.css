@@ -56,8 +56,8 @@ body{
 }
 #navbar>div>#pages>div:hover{
     color: grey;
-    background-color: rgb(234, 234, 234);
     cursor: pointer;
+    background-color: rgb(245, 245, 245);
 }
 h1{
     text-align: center;
