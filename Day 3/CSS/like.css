@@ -324,15 +324,6 @@ footer>p{
         grid-template-rows: repeat(3,1fr);
         gap: 30px;
     }
-    #likewall{
-        width: 90%;
-        margin: auto;
-        grid-template-columns: repeat(3,1fr);
-        gap: 20px 15px;
-    }
-    #likewall>div>button{
-        padding: 8px;
-    }
 }
 @media all and (min-width: 350px) and (max-width:649px){
     #offerstab>div{
@@ -398,14 +389,5 @@ footer>p{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3,1fr);
         gap: 30px;
-    }
-    #likewall{
-        width: 90%;
-        margin: auto;
-        grid-template-columns: repeat(2,1fr);
-        gap: 20px 15px;
-    }
-    #likewall>div>button{
-        padding: 8px;
     }
 }

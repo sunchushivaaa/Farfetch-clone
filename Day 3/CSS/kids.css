@@ -425,8 +425,9 @@ footer>p{
     margin-top: 5px;
 }
 #discover>div:nth-child(2)>div>button{
+    padding: 8px 12px;
     border-radius: 8px;
-    border: 0px solid black;
+    border: 1px solid black;
     background-color: white;
     margin-bottom: 10px;
 }
@@ -553,8 +554,9 @@ footer>p{
     margin-top: -10px;
 }
 #discover>div:nth-child(2)>div>button{
+    padding: 8px 12px;
     border-radius: 8px;
-    border: 0px solid black;
+    border: 1px solid black;
     background-color: white;
     margin-bottom: 10px;
 }
