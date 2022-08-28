@@ -8,7 +8,6 @@ let kids = document.getElementById("kids");
 let wall = document.getElementById("checkoutwall");
 let total = document.getElementById("total");
 let button = document.querySelector("#checkout>button");
-let h2 = document.querySelector("#checkout>h2");
 
 home.addEventListener("click", homeFun);
 like.addEventListener("click", likeFun);
@@ -81,7 +80,6 @@ function displayTable(read){
             event.target.parentNode.remove();
             cartArr.splice(i,1);
             localStorage.setItem("cart-prods" , JSON.stringify(cartArr));
-            window.location.reload();
         });
 
         block.append(image, p1, p2, p3, p4, btnRemove);
@@ -105,42 +103,9 @@ total.addEventListener("click", function(){
 
 
 function buttonFun(){
-    if(total.innerText!=0){
-        window.location.href = "/Day 3/Html/payment.html";
-        let amount = total.innerHTML;
-        localStorage.setItem("amount", JSON.parse(amount));
-    } else{
-        alert("Add products to cart");
-    }
-
-};
-
-let dataArr = JSON.parse(localStorage.getItem("data")) || [];
-
-let data = document.getElementById("emailid");
-let send = document.getElementById("send");
-
-send.addEventListener("click", function(){
-    let x = data.value;
-
-    let out;
-    for(let z=0; z<dataArr.length; z++){
-        if(dataArr[z].email==x){
-            out = true;
-            break;
-        }
-    }
-    if(out==true){
-        alert("You are already our registered customer");
-    }else{
-        alert("Thank you for your trust. Email has been sent!");
-    }
-
-    let dataObj = {"email": x,};
-    dataArr.push(dataObj);
-    localStorage.setItem("data", JSON.stringify(dataArr));
-
-    window.location.reload();
-})
+    window.location.href = "/Day 3/Html/payment.html";
+    let amount = total.innerText;
+    localStorage.setItem("amount", JSON.parse(amount));
+}
 
 
