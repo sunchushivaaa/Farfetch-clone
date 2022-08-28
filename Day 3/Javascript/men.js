@@ -209,3 +209,31 @@ function displayTable2(read){
     })
 }
 displayTable2(trendingnowmenData);
+
+let dataArr = JSON.parse(localStorage.getItem("data")) || [];
+
+let data = document.getElementById("emailid");
+let send = document.getElementById("send");
+
+send.addEventListener("click", function(){
+    let x = data.value;
+
+    let out;
+    for(let z=0; z<dataArr.length; z++){
+        if(dataArr[z].email==x){
+            out = true;
+            break;
+        }
+    }
+    if(out==true){
+        alert("You are already our registered customer");
+    }else{
+        alert("Thank you for your trust. Email has been sent!");
+    }
+
+    let dataObj = {"email": x,};
+    dataArr.push(dataObj);
+    localStorage.setItem("data", JSON.stringify(dataArr));
+
+    window.location.reload();
+})
