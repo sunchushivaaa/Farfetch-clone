@@ -54,10 +54,9 @@ button:hover{
 }
 @media all and (min-width: 581px) and (max-width: 1080px){
     #gateway{
-        width: 65%;
+        width: 55%;
     }
     button{
         top: 60px;
-        left: 40px;
     }
 }

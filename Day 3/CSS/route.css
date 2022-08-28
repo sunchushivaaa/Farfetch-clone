@@ -248,11 +248,6 @@ footer>p{
     margin-bottom: 10px;
     margin-right: 8px;
 }
-#thewall>div>#like{
-    padding: 0;
-    border: 0px solid black;
-    margin: 0 15px 0 5px;
-}
 #thewall>div>button:hover{
     cursor: pointer;
     color: grey;

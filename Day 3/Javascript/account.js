@@ -8,7 +8,6 @@ let kids = document.getElementById("kids");
 let select = document.getElementById("select");
 let body = document.querySelector("#push");
 let add = document.querySelectorAll("#additions>div");
-let apend = document.querySelector("#append");
 
 home.addEventListener("click", homeFun);
 like.addEventListener("click", likeFun);
@@ -17,9 +16,6 @@ account.addEventListener("click", accountFun);
 men.addEventListener("click", menFun);
 women.addEventListener("click", womenFun);
 kids.addEventListener("click", kidsFun);
-
-let signupArr = JSON.parse(localStorage.getItem("signup-details")) || [];
-let loginArr = JSON.parse(localStorage.getItem("login-details")) || [];
 
 function homeFun(){
     window.location.href = "/Day 3/Html/index.html";
@@ -233,4 +229,3 @@ send.addEventListener("click", function(){
 
     window.location.reload();
 });
-
