@@ -8,6 +8,7 @@ let kids = document.getElementById("kids");
 let select = document.getElementById("select");
 let body = document.querySelector("#push");
 let add = document.querySelectorAll("#additions>div");
+let apend = document.querySelector("#append");
 
 home.addEventListener("click", homeFun);
 like.addEventListener("click", likeFun);
@@ -198,8 +199,7 @@ select.addEventListener("change", function(){
 
         signup.append(inp1,inp2,inp3,inp4,btn);
         div.append(h2,signup);
-        apend.append(div);
-        body.append(apend);
+        body.append(div);
 
     } else{
         body.innerHTML = "";
