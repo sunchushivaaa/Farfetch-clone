@@ -78,6 +78,7 @@ function displayTable(read){
             event.target.parentNode.remove();
             likedArr.splice(i,1);
             localStorage.setItem("liked-prods" , JSON.stringify(likedArr));
+            window.location.reload();
         })
 
         let btnCart = document.createElement("button");
@@ -88,6 +89,9 @@ function displayTable(read){
             btnCart.style.fontWeight = "bold";
             cartArr.push(elem);
             localStorage.setItem("cart-prods", JSON.stringify(cartArr));
+            likedArr.splice(i,1);
+            localStorage.setItem("liked-prods" , JSON.stringify(likedArr));
+            window.location.reload();
           });
 
         block.append(image, p1, p2, p3, p4, btnRemove, btnCart);
@@ -95,3 +99,31 @@ function displayTable(read){
     })
 }
 displayTable(likedArr);
+
+let dataArr = JSON.parse(localStorage.getItem("data")) || [];
+
+let data = document.getElementById("emailid");
+let send = document.getElementById("send");
+
+send.addEventListener("click", function(){
+    let x = data.value;
+
+    let out;
+    for(let z=0; z<dataArr.length; z++){
+        if(dataArr[z].email==x){
+            out = true;
+            break;
+        }
+    }
+    if(out==true){
+        alert("You are already our registered customer");
+    }else{
+        alert("Thank you for your trust. Email has been sent!");
+    }
+
+    let dataObj = {"email": x,};
+    dataArr.push(dataObj);
+    localStorage.setItem("data", JSON.stringify(dataArr));
+
+    window.location.reload();
+})
